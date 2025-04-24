@@ -5,7 +5,6 @@ import waterImage from './assets/images/water.jpg';
 import fishImage from './assets/images/fish.jpg';
 import cheetosImage from './assets/images/cheetos.jpg';
 import breadImage from './assets/images/bread.jpg';
-import avatarImage from './assets/images/avatar.png';
 
 function ProductCard({ name, price, stock, image }) {
   return (
@@ -66,7 +65,7 @@ function App() {
             <FaShoppingCart size={20} />
           </div>
           <div className="user-profile">
-            <img src="{avatarImage}" alt="Admin" />
+            <img src="avatar.png" alt="Admin" />
             <div className="user-details">
               <span className="user-name">มานะ มานี</span>
               <span className="user-role">Admin</span>
