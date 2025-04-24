@@ -18,52 +18,28 @@ function ProductCard({ name, price, stock, image }) {
 function App() {
   const products = [
     {
-      name: 'เลย์ รสโนริสาหร่ายทะเล',
-      price: '31.00',
-      stock: 20,
-      image: '/images/lays.png'
-    },
-    {
-      name: 'วีฟู้ดเดย์ น้ำตาลทรายขาว',
-      price: '26.00',
-      stock: 15,
-      image: '/images/sugar.png'
-    },
-    {
-      name: 'สปาคลีน กลิ่นโรแมนติกโรส',
-      price: '29.00',
-      stock: 7,
-      image: '/images/spa.png'
-    },
-    {
-      name: 'เคทส์ น้ำมันรำข้าว',
-      price: '85.00',
-      stock: 10,
-      image: '/images/oil.png'
-    },
-    {
       name: 'สิงห์ น้ำดื่ม',
       price: '29.00',
       stock: 40,
-      image: '/images/water.png'
+      image: '/public/images/water.jpg'
     },
     {
-      name: 'ปันปัน ปลาแมคเคอเรลทอด',
+      name: 'ปุ้มปุ้ย ปลาแมคเคอเรลทอด',
       price: '27.00',
       stock: 20,
-      image: '/images/fish.png'
+      image: '/public/images/fish.jpg'
     },
     {
       name: 'ชีโตส รสสไปซี่',
       price: '20.00',
       stock: 20,
-      image: '/images/cheetos.png'
+      image: '/public/images/cheetos.jpg'
     },
     {
       name: 'ฟาร์มเฮ้าส์ ขนมปังโฮลวีต',
       price: '46.00',
       stock: 20,
-      image: '/images/bread.png'
+      image: '/public/images/bread.jpg'
     }
   ]
 
@@ -71,7 +47,7 @@ function App() {
     <div className="app-container">
       <header className="header">
         <div className="logo">
-          <span className="logo-text">PosSible</span>
+          <span className="logo-text">POSSIBLE</span>
         </div>
         <div className="search-bar">
           <input type="text" placeholder="ค้นหาสินค้า" />
@@ -87,7 +63,7 @@ function App() {
           <div className="user-profile">
             <img src="/images/avatar.png" alt="Admin" />
             <div className="user-details">
-              <span className="user-name">สมชาย ทีวีข่าว</span>
+              <span className="user-name">มานะ มานี</span>
               <span className="user-role">Admin</span>
             </div>
             <FaChevronDown size={12} />
