@@ -3,43 +3,43 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
-  workflow_dispatch:
+      - main  # หรือสาขาที่คุณต้องการให้ Trigger การ Deploy
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      # Step 1: Checkout the repository
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Step 2: Setup Node.js (using Node 18 for modern support)
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: '18'  # หรือเวอร์ชันที่คุณใช้
 
-      # Step 3: Install Dependencies
       - name: Install Dependencies
         run: npm install
 
-      # Step 4: Build the project (works for React + Vite)
-      - name: Build project
-        run: npm run build
+      - name: Build Project
+        run: npm run build  # ตรวจสอบว่าโปรเจกต์ของคุณมีคำสั่ง build หรือไม่
 
-      # Step 5: Debug build directory (optional step for troubleshooting)
-      - name: Debug build directory
-        run: ls -la ./dist
-
-      # Step 6: Debug Node.js version (optional step for troubleshooting)
-      - name: Debug Node.js version
-        run: node -v
-
-      # Step 7: Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          path: ./dist  # หรือโฟลเดอร์ที่ได้จากการ build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
