@@ -21,25 +21,25 @@ function App() {
       name: 'สิงห์ น้ำดื่ม',
       price: '29.00',
       stock: 40,
-      image: '/public/images/water.jpg'
+      image: '/images/water.jpg'
     },
     {
       name: 'ปุ้มปุ้ย ปลาแมคเคอเรลทอด',
       price: '27.00',
       stock: 20,
-      image: '/public/images/fish.jpg'
+      image: '/images/fish.jpg'
     },
     {
       name: 'ชีโตส รสสไปซี่',
       price: '20.00',
       stock: 20,
-      image: '/public/images/cheetos.jpg'
+      image: '/images/cheetos.jpg'
     },
     {
       name: 'ฟาร์มเฮ้าส์ ขนมปังโฮลวีต',
       price: '46.00',
       stock: 20,
-      image: '/public/images/bread.jpg'
+      image: '/images/bread.jpg'
     }
   ]
 
