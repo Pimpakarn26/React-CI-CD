@@ -2,10 +2,11 @@ import { useState } from 'react'
 import './App.css'
 import { FaShoppingCart, FaBell, FaChevronDown } from 'react-icons/fa'
 import waterImage from './assets/images/water.jpg';
-import fishImage from './assets/images/fish.jpg';
-import cheetosImage from './assets/images/cheetos.jpg';
+// import fishImage from './assets/images/fish.jpg';
+// import cheetosImage from './assets/images/cheetos.jpg';
 import breadImage from './assets/images/bread.jpg';
-
+import codomoImage from './assets/images/codomo.jpg';
+import yasrifunImage from './assets/images/yasrifun.jpg';
 function ProductCard({ name, price, stock, image }) {
   return (
     <div className="product-card">
@@ -23,21 +24,21 @@ function App() {
   const products = [
     {
       name: 'คริสตัล น้ำดื่ม',
-      price: '29.00',
+      price: '14.00',
       stock: 40,
       image: waterImage,
     },
     {
-      name: 'ปุ้มปุ้ย ปลาแมคเคอเรลทอด',
-      price: '27.00',
+      name: 'แป้ง โคโดโมะ',
+      price: '15.00',
       stock: 20,
-      image: fishImage,
+      image: codomoImage,
     },
     {
-      name: 'ชีโตส รสสไปซี่',
+      name: 'ยาสีฟันคอเกต',
       price: '20.00',
       stock: 20,
-      image: cheetosImage,
+      image: yasrifunImage,
     },
     {
       name: 'ฟาร์มเฮ้าส์ ขนมปังโฮลวีต',
