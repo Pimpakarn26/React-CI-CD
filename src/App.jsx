@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import './App.css'
 import { FaShoppingCart, FaBell, FaChevronDown } from 'react-icons/fa'
-import codomoImage from './assets/images/codomo.jpg';
-import yarifunImage from './assets/images/yasrifun.jpg';
-import breadImage from './assets/images/bread.jpg';
 import waterImage from './assets/images/water.jpg';
+import fishImage from './assets/images/fish.jpg';
+import cheetosImage from './assets/images/cheetos.jpg';
+import breadImage from './assets/images/bread.jpg';
 
 function ProductCard({ name, price, stock, image }) {
   return (
@@ -22,28 +22,28 @@ function ProductCard({ name, price, stock, image }) {
 function App() {
   const products = [
     {
-      name: 'แป้งโคโดโมะ',
-      price: '28.00',
-      stock: 40,
-      image: codomoImage,
-    },
-    {
-      name: 'คอลเกต ยาสีฟัน',
-      price: '18.00',
-      stock: 60,
-      image: yarifunImage,
-    },
-    {
       name: 'คริสตัล น้ำดื่ม',
-      price: '7.00',
-      stock: 50,
+      price: '29.00',
+      stock: 40,
+      image: waterImage,
+    },
+    {
+      name: 'ปุ้มปุ้ย ปลาแมคเคอเรลทอด',
+      price: '27.00',
+      stock: 20,
+      image: fishImage,
+    },
+    {
+      name: 'ชีโตส รสสไปซี่',
+      price: '20.00',
+      stock: 20,
       image: cheetosImage,
     },
     {
       name: 'ฟาร์มเฮ้าส์ ขนมปังโฮลวีต',
       price: '46.00',
       stock: 20,
-      image: waterImage,
+      image: breadImage,
     }
   ]
 
@@ -67,7 +67,7 @@ function App() {
           <div className="user-profile">
             <img src="avatar.png" alt="Admin" />
             <div className="user-details">
-              <span className="user-name">มานะ มานี ช็อปปิ้ง</span>
+              <span className="user-name">มานะ มานี</span>
               <span className="user-role">Admin</span>
             </div>
             <FaChevronDown size={12} />
@@ -81,8 +81,8 @@ function App() {
             <li>แดชบอร์ด</li>
             <li className="active">ออเดอร์ขาย</li>
             <li>สินค้า</li>
-            {/* <li>โปรโมชั่น</li>
-            <li>ประวัติการขาย</li> */}
+            <li>โปรโมชั่น</li>
+            <li>ประวัติการขาย</li>
             <li>จัดการ</li>
           </ul>
         </nav>
@@ -91,7 +91,7 @@ function App() {
           <div className="product-header">
             <h2>เลือกสินค้า</h2>
             <div className="filter-button">
-              <span>ตัวกรองสินค้า</span>
+              <span>ตัวกรอง</span>
               <FaChevronDown size={12} />
             </div>
           </div>
