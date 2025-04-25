@@ -81,8 +81,6 @@ function App() {
             <li>แดชบอร์ด</li>
             <li className="active">ออเดอร์ขาย</li>
             <li>สินค้า</li>
-            <li>โปรโมชั่น</li>
-            <li>ประวัติการขาย</li>
             <li>จัดการ</li>
           </ul>
         </nav>
@@ -91,7 +89,7 @@ function App() {
           <div className="product-header">
             <h2>เลือกสินค้า</h2>
             <div className="filter-button">
-              <span>ตัวกรอง</span>
+              <span>ตัวกรองสินค้า</span>
               <FaChevronDown size={12} />
             </div>
           </div>
